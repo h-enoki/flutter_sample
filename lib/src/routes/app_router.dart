@@ -7,7 +7,7 @@ import 'app_routes.dart';
 class AppRouter {
   static Route<dynamic>? generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case '/':
+      case AppRoutes.home:
         return _buildRoute(const MyHomePage());
       case AppRoutes.hoge:
         return _buildRoute(const HogePage());
