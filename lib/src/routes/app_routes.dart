@@ -3,4 +3,5 @@ class AppRoutes {
   static const hoge = '/hoge';
   static const statefulwidget = '/statefulwidget';
   static const statelesswidget = '/statelesswidget';
+  static const listView = '/listView';
 }

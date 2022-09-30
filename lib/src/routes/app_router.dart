@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sample/src/views/hoge_page.dart';
 import 'package:flutter_sample/src/views/home_page.dart';
+import 'package:flutter_sample/src/views/listview_page.dart';
 import 'package:flutter_sample/src/views/statefulwidget_page.dart';
 import 'package:flutter_sample/src/views/statelesswidget_page.dart';
 
@@ -19,12 +20,16 @@ class AppRouter {
         return _buildRoute(const StatefulWidgetPage());
 
       case AppRoutes.statelesswidget:
-        return _buildRoute(const StatelessWidgetPage(
-          color: Colors.blueGrey,
-          child: Center(
-            child: Text("StatelessWidgetPage"),
+        return _buildRoute(
+          const StatelessWidgetPage(
+            color: Colors.blueGrey,
+            child: Center(
+              child: Text("StatelessWidgetPage"),
+            ),
           ),
-        ));
+        );
+      case AppRoutes.listView:
+        return _buildRoute(const ListViewPage());
 
       default:
         return null;
