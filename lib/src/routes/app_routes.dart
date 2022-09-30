@@ -5,4 +5,5 @@ class AppRoutes {
   static const statelesswidget = '/statelesswidget';
   static const listView = '/listView';
   static const container = '/container';
+  static const row = '/row';
 }
