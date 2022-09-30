@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sample/src/views/container_page.dart';
 import 'package:flutter_sample/src/views/hoge_page.dart';
 import 'package:flutter_sample/src/views/home_page.dart';
 import 'package:flutter_sample/src/views/listview_page.dart';
@@ -30,6 +31,9 @@ class AppRouter {
         );
       case AppRoutes.listView:
         return _buildRoute(const ListViewPage());
+
+      case AppRoutes.container:
+        return _buildRoute(const ContainerPage());
 
       default:
         return null;

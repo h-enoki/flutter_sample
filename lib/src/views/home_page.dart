@@ -30,6 +30,7 @@ class MyHomePage extends StatelessWidget {
       _myListTile(context, AppRoutes.statefulwidget),
       _myListTile(context, AppRoutes.statelesswidget),
       _myListTile(context, AppRoutes.listView),
+      _myListTile(context, AppRoutes.container),
     ];
   }
 
