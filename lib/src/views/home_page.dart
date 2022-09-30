@@ -43,7 +43,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.pushNamed(context, AppRoutes.hoge);
               },
               child: const Text(
-                'Go to HogePage',
+                AppRoutes.hoge,
+                style: TextStyle(color: Colors.black),
+              ),
+            ),
+            TextButton(
+              style: TextButton.styleFrom(
+                backgroundColor: Colors.amber,
+              ),
+              onPressed: () {
+                // 画面遷移
+                Navigator.pushNamed(context, AppRoutes.statefulwidget);
+              },
+              child: const Text(
+                AppRoutes.statefulwidget,
                 style: TextStyle(color: Colors.black),
               ),
             ),
