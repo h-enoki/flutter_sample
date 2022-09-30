@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sample/src/views/container_page.dart';
 import 'package:flutter_sample/src/views/hoge_page.dart';
 import 'package:flutter_sample/src/views/home_page.dart';
-import 'package:flutter_sample/src/views/listview_page.dart';
-import 'package:flutter_sample/src/views/statefulwidget_page.dart';
-import 'package:flutter_sample/src/views/statelesswidget_page.dart';
+import 'package:flutter_sample/src/views/widget_sample/container_page.dart';
+import 'package:flutter_sample/src/views/widget_sample/listview_page.dart';
+import 'package:flutter_sample/src/views/widget_sample/statefulwidget_page.dart';
+import 'package:flutter_sample/src/views/widget_sample/statelesswidget_page.dart';
 
 import 'app_routes.dart';
 
