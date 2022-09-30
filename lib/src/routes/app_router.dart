@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sample/src/views/hoge_page.dart';
 import 'package:flutter_sample/src/views/home_page.dart';
 import 'package:flutter_sample/src/views/statefulwidget_page.dart';
+import 'package:flutter_sample/src/views/statelesswidget_page.dart';
 
 import 'app_routes.dart';
 
@@ -10,10 +11,21 @@ class AppRouter {
     switch (settings.name) {
       case AppRoutes.home:
         return _buildRoute(const MyHomePage());
+
       case AppRoutes.hoge:
-        return _buildRoute(const HogePage());
+        return _buildRoute(HogePage());
+
       case AppRoutes.statefulwidget:
         return _buildRoute(const StatefulWidgetPage());
+
+      case AppRoutes.statelesswidget:
+        return _buildRoute(const StatelessWidgetPage(
+          color: Colors.blueGrey,
+          child: Center(
+            child: Text("StatelessWidgetPage"),
+          ),
+        ));
+
       default:
         return null;
     }

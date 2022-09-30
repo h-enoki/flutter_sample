@@ -60,6 +60,19 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: TextStyle(color: Colors.black),
               ),
             ),
+            TextButton(
+              style: TextButton.styleFrom(
+                backgroundColor: Colors.amber,
+              ),
+              onPressed: () {
+                // 画面遷移
+                Navigator.pushNamed(context, AppRoutes.statelesswidget);
+              },
+              child: const Text(
+                AppRoutes.statelesswidget,
+                style: TextStyle(color: Colors.black),
+              ),
+            ),
           ],
         ),
       ),
