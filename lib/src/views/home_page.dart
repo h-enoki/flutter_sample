@@ -26,6 +26,7 @@ class MyHomePage extends StatelessWidget {
 
   List<Widget> _items(BuildContext context) {
     return [
+      _myListTile(context, AppRoutes.center),
       _myListTile(context, AppRoutes.layoutBuilder),
       _myListTile(context, AppRoutes.flexible),
       _myListTile(context, AppRoutes.expanded),

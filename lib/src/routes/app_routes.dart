@@ -12,4 +12,5 @@ class AppRoutes {
   static const expanded = '/expanded';
   static const flexible = '/flexible';
   static const layoutBuilder = '/layoutBuilder';
+  static const center = '/center';
 }
