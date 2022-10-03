@@ -26,15 +26,16 @@ class MyHomePage extends StatelessWidget {
 
   List<Widget> _items(BuildContext context) {
     return [
-      _myListTile(context, AppRoutes.hoge),
-      _myListTile(context, AppRoutes.statefulwidget),
-      _myListTile(context, AppRoutes.statelesswidget),
-      _myListTile(context, AppRoutes.listView),
-      _myListTile(context, AppRoutes.container),
-      _myListTile(context, AppRoutes.row),
-      _myListTile(context, AppRoutes.column),
-      _myListTile(context, AppRoutes.stack),
+      _myListTile(context, AppRoutes.expanded),
       _myListTile(context, AppRoutes.wrap),
+      _myListTile(context, AppRoutes.stack),
+      _myListTile(context, AppRoutes.column),
+      _myListTile(context, AppRoutes.row),
+      _myListTile(context, AppRoutes.container),
+      _myListTile(context, AppRoutes.listView),
+      _myListTile(context, AppRoutes.statelesswidget),
+      _myListTile(context, AppRoutes.statefulwidget),
+      _myListTile(context, AppRoutes.hoge),
     ];
   }
 

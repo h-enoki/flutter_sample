@@ -9,4 +9,5 @@ class AppRoutes {
   static const column = '/column';
   static const stack = '/stack';
   static const wrap = '/wrap';
+  static const expanded = '/expanded';
 }

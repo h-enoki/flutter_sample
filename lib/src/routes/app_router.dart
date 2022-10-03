@@ -3,6 +3,7 @@ import 'package:flutter_sample/src/views/hoge_page.dart';
 import 'package:flutter_sample/src/views/home_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/column_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/container_page.dart';
+import 'package:flutter_sample/src/views/widget_sample/expanded_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/listview_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/row_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/stack_page.dart';
@@ -50,6 +51,9 @@ class AppRouter {
 
       case AppRoutes.wrap:
         return _buildRoute(const WrapPage());
+
+      case AppRoutes.expanded:
+        return _buildRoute(const ExpandedPage());
 
       default:
         return null;
