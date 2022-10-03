@@ -10,4 +10,5 @@ class AppRoutes {
   static const stack = '/stack';
   static const wrap = '/wrap';
   static const expanded = '/expanded';
+  static const flexible = '/flexible';
 }

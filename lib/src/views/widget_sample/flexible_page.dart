@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class ExpandedPage extends StatelessWidget {
-  const ExpandedPage({super.key});
+class FlexiblePage extends StatelessWidget {
+  const FlexiblePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     final items = _items(context);
-    final expandedItems = _expandedItems(context);
+    final flexibleItems = _flexibleItems(context);
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("ExpandedPage"),
+        title: const Text("FlexiblePage"),
       ),
       body: Container(
         color: Colors.grey,
@@ -26,7 +26,7 @@ class ExpandedPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: expandedItems,
+              children: flexibleItems,
             ),
           ],
         ),
@@ -42,17 +42,17 @@ class ExpandedPage extends StatelessWidget {
     ];
   }
 
-  List<Widget> _expandedItems(BuildContext context) {
+  List<Widget> _flexibleItems(BuildContext context) {
     return [
-      Expanded(
+      Flexible(
         flex: 1,
         child: _myContainer(context, Icons.favorite, Colors.blueGrey),
       ),
-      Expanded(
+      Flexible(
         flex: 2,
         child: _myContainer(context, Icons.star, Colors.indigo),
       ),
-      Expanded(
+      Flexible(
         flex: 3,
         child: _myContainer(context, Icons.wallet, Colors.deepPurple),
       ),
@@ -63,7 +63,7 @@ class ExpandedPage extends StatelessWidget {
     return Container(
       color: color,
       height: 60,
-      width: 60,
+      width: 200,
       alignment: const Alignment(0.0, 0.0),
       child: Icon(
         icon,
