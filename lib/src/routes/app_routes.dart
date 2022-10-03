@@ -14,4 +14,5 @@ class AppRoutes {
   static const layoutBuilder = '/layoutBuilder';
   static const center = '/center';
   static const align = '/align';
+  static const padding = '/padding';
 }
