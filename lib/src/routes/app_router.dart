@@ -8,6 +8,7 @@ import 'package:flutter_sample/src/views/widget_sample/row_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/stack_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/statefulwidget_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/statelesswidget_page.dart';
+import 'package:flutter_sample/src/views/widget_sample/wrap_page.dart';
 
 import 'app_routes.dart';
 
@@ -40,11 +41,15 @@ class AppRouter {
 
       case AppRoutes.row:
         return _buildRoute(const RowPage());
+
       case AppRoutes.column:
         return _buildRoute(const ColumnPage());
 
       case AppRoutes.stack:
         return _buildRoute(StackPage());
+
+      case AppRoutes.wrap:
+        return _buildRoute(const WrapPage());
 
       default:
         return null;

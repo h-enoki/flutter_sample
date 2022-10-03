@@ -34,6 +34,7 @@ class MyHomePage extends StatelessWidget {
       _myListTile(context, AppRoutes.row),
       _myListTile(context, AppRoutes.column),
       _myListTile(context, AppRoutes.stack),
+      _myListTile(context, AppRoutes.wrap),
     ];
   }
 
