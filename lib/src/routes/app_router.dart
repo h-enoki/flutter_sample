@@ -5,6 +5,7 @@ import 'package:flutter_sample/src/views/widget_sample/column_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/container_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/listview_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/row_page.dart';
+import 'package:flutter_sample/src/views/widget_sample/stack_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/statefulwidget_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/statelesswidget_page.dart';
 
@@ -41,6 +42,9 @@ class AppRouter {
         return _buildRoute(const RowPage());
       case AppRoutes.column:
         return _buildRoute(const ColumnPage());
+
+      case AppRoutes.stack:
+        return _buildRoute(StackPage());
 
       default:
         return null;
