@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sample/src/components/my_app_bar.dart';
 
 class WrapPage extends StatelessWidget {
   const WrapPage({super.key});
@@ -8,9 +9,7 @@ class WrapPage extends StatelessWidget {
     final items = _items(context);
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("WrapPage"),
-      ),
+      appBar: const MyAppBar("WrapPage"),
       body: Container(
         color: Colors.grey,
         height: 300,

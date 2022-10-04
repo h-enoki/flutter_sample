@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sample/src/components/my_app_bar.dart';
 
 // StatefulWidgetを継承したクラスを作る
 class StatefulWidgetPage extends StatefulWidget {
@@ -31,9 +32,7 @@ class _StatefulWidgetPageState extends State<StatefulWidgetPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("StatefulWidgetPage"),
-      ),
+      appBar: const MyAppBar("StatefulWidgetPage"),
       body: GestureDetector(
         behavior: HitTestBehavior.opaque, //画面全体をタップ
         onTap: _incrementCounter,

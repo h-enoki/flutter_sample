@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sample/src/components/my_app_bar.dart';
 import 'package:flutter_sample/src/routes/app_routes.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -9,8 +10,14 @@ class MyHomePage extends StatelessWidget {
     final items = _items(context);
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("HomePage"),
+      appBar: MyAppBar.withSettingsButton(
+        "hoge",
+        leading: IconButton(
+          icon: const Icon(Icons.menu),
+          onPressed: () {
+            debugPrint("onPressed menu");
+          },
+        ),
       ),
       body: ListView.separated(
         itemCount: items.length,
@@ -26,6 +33,7 @@ class MyHomePage extends StatelessWidget {
 
   List<Widget> _items(BuildContext context) {
     return [
+      _myListTile(context, AppRoutes.hoge),
       _myListTile(context, AppRoutes.padding),
       _myListTile(context, AppRoutes.align),
       _myListTile(context, AppRoutes.center),
@@ -40,13 +48,12 @@ class MyHomePage extends StatelessWidget {
       _myListTile(context, AppRoutes.listView),
       _myListTile(context, AppRoutes.statelesswidget),
       _myListTile(context, AppRoutes.statefulwidget),
-      _myListTile(context, AppRoutes.hoge),
     ];
   }
 
   Widget _myListTile(BuildContext context, String appRoutes) {
     return ListTile(
-      leading: const Icon(Icons.settings),
+      leading: const Icon(Icons.star),
       title: Text(
         appRoutes,
         style: const TextStyle(

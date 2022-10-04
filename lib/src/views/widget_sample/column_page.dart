@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sample/src/components/my_app_bar.dart';
 
 class ColumnPage extends StatelessWidget {
   const ColumnPage({super.key});
@@ -8,9 +9,7 @@ class ColumnPage extends StatelessWidget {
     final items = _items(context);
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("ColumnPage"),
-      ),
+      appBar: const MyAppBar("ColumnPage"),
       body: Container(
         color: Colors.grey,
         height: 300,

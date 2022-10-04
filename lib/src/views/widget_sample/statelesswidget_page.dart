@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sample/src/components/my_app_bar.dart';
 
 class StatelessWidgetPage extends StatelessWidget {
   const StatelessWidgetPage({
@@ -13,9 +14,7 @@ class StatelessWidgetPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("StatelessWidgetPage"),
-      ),
+      appBar: const MyAppBar("StatelessWidgetPage"),
       body: Container(
         color: color,
         child: child,

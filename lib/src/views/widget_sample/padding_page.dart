@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sample/src/components/my_app_bar.dart';
 
 class PaddingPage extends StatelessWidget {
   const PaddingPage({super.key});
@@ -6,9 +7,7 @@ class PaddingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("PaddingPage"),
-      ),
+      appBar: const MyAppBar("PaddingPage"),
       body: Container(
         color: Colors.blueGrey,
         // height: 500,

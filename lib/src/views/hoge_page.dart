@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sample/src/components/my_app_bar.dart';
 
 class HogePage extends StatelessWidget {
   const HogePage({super.key});
@@ -6,9 +7,7 @@ class HogePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("HogePage"),
-      ),
+      appBar: MyAppBar.withSettingsButton("HogePage"),
       body: const Center(
         child: Text("HogePage"),
       ),

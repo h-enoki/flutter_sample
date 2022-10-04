@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sample/src/components/my_app_bar.dart';
 
 class LayoutBuilderPage extends StatelessWidget {
   const LayoutBuilderPage({super.key});
@@ -6,9 +7,7 @@ class LayoutBuilderPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("LayoutBuilderPage"),
-      ),
+      appBar: const MyAppBar("LayoutBuilderPage"),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

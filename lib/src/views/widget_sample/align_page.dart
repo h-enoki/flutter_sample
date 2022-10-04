@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sample/src/components/my_app_bar.dart';
 
 class AlignPage extends StatelessWidget {
   const AlignPage({super.key});
@@ -8,9 +9,7 @@ class AlignPage extends StatelessWidget {
     final items = _items(context);
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("AlignPage"),
-      ),
+      appBar: const MyAppBar("AlignPage"),
       body: Container(
         color: Colors.grey,
         height: 300,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sample/src/components/my_app_bar.dart';
 
 class ExpandedPage extends StatelessWidget {
   const ExpandedPage({super.key});
@@ -9,9 +10,7 @@ class ExpandedPage extends StatelessWidget {
     final expandedItems = _expandedItems(context);
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("ExpandedPage"),
-      ),
+      appBar: const MyAppBar("ExpandedPage"),
       body: Container(
         color: Colors.grey,
         height: 300,

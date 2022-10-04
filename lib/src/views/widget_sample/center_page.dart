@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sample/src/components/my_app_bar.dart';
 
 class CenterPage extends StatelessWidget {
   const CenterPage({super.key});
@@ -6,9 +7,7 @@ class CenterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("CenterPage"),
-      ),
+      appBar: const MyAppBar("CenterPage"),
       body: Container(
         color: Colors.blueGrey,
         height: 500,

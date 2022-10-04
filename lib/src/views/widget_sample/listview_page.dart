@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sample/src/components/my_app_bar.dart';
 
 class ListViewPage extends StatefulWidget {
   const ListViewPage({super.key});
@@ -19,9 +20,7 @@ class _ListViewPageState extends State<ListViewPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("ListViewPage"),
-      ),
+      appBar: const MyAppBar("ListViewPage"),
       body: ListView.builder(
         itemCount: items.length,
         itemBuilder: (context, index) {

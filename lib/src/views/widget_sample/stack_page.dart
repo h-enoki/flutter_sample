@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_sample/src/components/my_app_bar.dart';
 
 class StackPage extends StatelessWidget {
   StackPage({super.key});
@@ -13,9 +14,7 @@ class StackPage extends StatelessWidget {
     final items = _items(context);
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("StackPage"),
-      ),
+      appBar: const MyAppBar("StackPage"),
       body: Container(
         color: Colors.grey,
         height: 300,

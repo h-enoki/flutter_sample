@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sample/src/components/my_app_bar.dart';
 
 class RowPage extends StatelessWidget {
   const RowPage({super.key});
@@ -8,9 +9,7 @@ class RowPage extends StatelessWidget {
     final items = _items(context);
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("RowPage"),
-      ),
+      appBar: const MyAppBar("RowPage"),
       body: Container(
         color: Colors.grey,
         height: 300,
