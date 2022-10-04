@@ -23,7 +23,7 @@ class AppRouter {
   static Route<dynamic>? generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case AppRoutes.home:
-        return _buildRoute(const MyHomePage());
+        return _buildRoute(MyHomePage());
 
       case AppRoutes.hoge:
         return _buildRoute(const HogePage());

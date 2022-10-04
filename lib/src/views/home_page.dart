@@ -11,12 +11,32 @@ class MyHomePage extends StatelessWidget {
 
     return Scaffold(
       appBar: MyAppBar.withSettingsButton(
-        "hoge",
+        "Home",
         leading: IconButton(
           icon: const Icon(Icons.menu),
           onPressed: () {
             debugPrint("onPressed menu");
           },
+        ),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          children: const <Widget>[
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+              child: Text('Drawer Header'),
+            ),
+            ListTile(
+              title: Text("Item 1"),
+              trailing: Icon(Icons.arrow_forward),
+            ),
+            ListTile(
+              title: Text("Item 2"),
+              trailing: Icon(Icons.arrow_forward),
+            ),
+          ],
         ),
       ),
       body: ListView.separated(
