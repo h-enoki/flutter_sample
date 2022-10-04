@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sample/src/components/my_app_bar.dart';
+import 'package:flutter_sample/src/components/my_drawer.dart';
 import 'package:flutter_sample/src/routes/app_routes.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -8,10 +9,13 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final items = _items(context);
+    var scaffoldKey = GlobalKey<ScaffoldState>();
 
     return Scaffold(
+      key: scaffoldKey,
       appBar: MyAppBar.withSettingsButton(
         "Home",
+        onSettingsPressed: () => scaffoldKey.currentState!.openEndDrawer(),
         leading: IconButton(
           icon: const Icon(Icons.menu),
           onPressed: () {
@@ -19,26 +23,7 @@ class MyHomePage extends StatelessWidget {
           },
         ),
       ),
-      drawer: Drawer(
-        child: ListView(
-          children: const <Widget>[
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-              child: Text('Drawer Header'),
-            ),
-            ListTile(
-              title: Text("Item 1"),
-              trailing: Icon(Icons.arrow_forward),
-            ),
-            ListTile(
-              title: Text("Item 2"),
-              trailing: Icon(Icons.arrow_forward),
-            ),
-          ],
-        ),
-      ),
+      endDrawer: const MyDrawer(),
       body: ListView.separated(
         itemCount: items.length,
         itemBuilder: (_, index) {

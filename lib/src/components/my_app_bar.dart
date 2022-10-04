@@ -14,6 +14,7 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
   factory MyAppBar.withSettingsButton(
     String title, {
     Widget? leading,
+    VoidCallback? onSettingsPressed,
   }) {
     return MyAppBar(
       title,
@@ -21,9 +22,10 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
       actions: [
         IconButton(
           icon: const Icon(Icons.settings),
-          onPressed: () {
-            debugPrint("onPressed settings");
-          },
+          onPressed: onSettingsPressed ??
+              () {
+                debugPrint("onPressed settings");
+              },
         ),
       ],
     );
