@@ -34,6 +34,7 @@ class MyHomePage extends StatelessWidget {
   List<Widget> _items(BuildContext context) {
     return [
       _myListTile(context, AppRoutes.hoge),
+      _myListTile(context, AppRoutes.bottomNavigationBar),
       _myListTile(context, AppRoutes.padding),
       _myListTile(context, AppRoutes.align),
       _myListTile(context, AppRoutes.center),
@@ -46,8 +47,8 @@ class MyHomePage extends StatelessWidget {
       _myListTile(context, AppRoutes.row),
       _myListTile(context, AppRoutes.container),
       _myListTile(context, AppRoutes.listView),
-      _myListTile(context, AppRoutes.statelesswidget),
-      _myListTile(context, AppRoutes.statefulwidget),
+      _myListTile(context, AppRoutes.statelessWidget),
+      _myListTile(context, AppRoutes.statefulWidget),
     ];
   }
 

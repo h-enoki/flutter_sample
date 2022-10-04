@@ -1,8 +1,8 @@
 class AppRoutes {
   static const home = '/';
   static const hoge = '/hoge';
-  static const statefulwidget = '/statefulwidget';
-  static const statelesswidget = '/statelesswidget';
+  static const statefulWidget = '/statefulWidget';
+  static const statelessWidget = '/statelessWidget';
   static const listView = '/listView';
   static const container = '/container';
   static const row = '/row';
@@ -15,4 +15,5 @@ class AppRoutes {
   static const center = '/center';
   static const align = '/align';
   static const padding = '/padding';
+  static const bottomNavigationBar = '/bottomNavigationBar';
 }

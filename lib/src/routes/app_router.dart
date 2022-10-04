@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sample/src/views/bottomnavigationbar_page.dart';
 import 'package:flutter_sample/src/views/hoge_page.dart';
 import 'package:flutter_sample/src/views/home_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/align_page.dart';
@@ -25,12 +26,12 @@ class AppRouter {
         return _buildRoute(const MyHomePage());
 
       case AppRoutes.hoge:
-        return _buildRoute(HogePage());
+        return _buildRoute(const HogePage());
 
-      case AppRoutes.statefulwidget:
+      case AppRoutes.statefulWidget:
         return _buildRoute(const StatefulWidgetPage());
 
-      case AppRoutes.statelesswidget:
+      case AppRoutes.statelessWidget:
         return _buildRoute(
           const StatelessWidgetPage(
             color: Colors.blueGrey,
@@ -74,6 +75,9 @@ class AppRouter {
 
       case AppRoutes.padding:
         return _buildRoute(const PaddingPage());
+
+      case AppRoutes.bottomNavigationBar:
+        return _buildRoute(const BottomNavigationBarPage());
 
       default:
         return null;
