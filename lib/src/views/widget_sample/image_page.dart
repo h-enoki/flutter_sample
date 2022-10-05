@@ -25,20 +25,28 @@ class ImagePage extends StatelessWidget {
       _myContainer(
         context,
         "asset",
-        Image.asset("assets/images/SampleImage.jpg"),
+        Image.asset(
+          "assets/images/SampleImage.jpg",
+          fit: BoxFit.cover,
+        ),
       ),
       _myContainer(
         context,
         "network",
-        Image.network("https://picsum.photos/id/200/300/200"),
+        Image.network(
+          "https://picsum.photos/id/200/150/100",
+          fit: BoxFit.cover,
+        ),
       ),
     ];
   }
 
   Widget _myContainer(BuildContext context, String title, Widget image) {
     return Container(
-      margin: const EdgeInsets.all(20),
+      width: 300,
+      margin: const EdgeInsets.only(top: 20),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             title,
@@ -49,7 +57,7 @@ class ImagePage extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: 300,
+            width: double.infinity,
             child: image,
           ),
         ],
