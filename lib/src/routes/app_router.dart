@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sample/src/views/bottomnavigationbar_page.dart';
 import 'package:flutter_sample/src/views/hoge_page.dart';
 import 'package:flutter_sample/src/views/home_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/align_page.dart';
+import 'package:flutter_sample/src/views/widget_sample/bottomnavigationbar_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/center_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/column_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/container_page.dart';
+import 'package:flutter_sample/src/views/widget_sample/dialogs_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/expanded_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/flexible_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/layoutBuilder_page.dart';
@@ -78,6 +79,9 @@ class AppRouter {
 
       case AppRoutes.bottomNavigationBar:
         return _buildRoute(const BottomNavigationBarPage());
+
+      case AppRoutes.dialogs:
+        return _buildRoute(const DialogsPage());
 
       default:
         return null;
