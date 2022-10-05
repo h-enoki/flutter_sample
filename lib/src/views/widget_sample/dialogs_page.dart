@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sample/src/components/dialog/my_alertDialog.dart';
+import 'package:flutter_sample/src/components/dialog/my_simpledialog.dart';
 import 'package:flutter_sample/src/components/my_app_bar.dart';
 
 class DialogsPage extends StatelessWidget {
@@ -21,9 +23,35 @@ class DialogsPage extends StatelessWidget {
 
   List<Widget> _items(BuildContext context) {
     return [
-      _myElevatedButton(context, "hoge", onPressed: () => debugPrint("hoge")),
-      _myElevatedButton(context, "hoge", onPressed: () => debugPrint("hoge")),
-      _myElevatedButton(context, "hoge"),
+      _myElevatedButton(
+        context,
+        "SimpleDialog",
+        onPressed: () async {
+          final String? selectedText = await showDialog<String>(
+            context: context,
+            builder: (_) {
+              return const MySimpleDialog(title: "SimpleDialog");
+            },
+          );
+          debugPrint(selectedText);
+        },
+      ),
+      _myElevatedButton(
+        context,
+        "AlertDialog",
+        onPressed: () async {
+          final String? selectedText = await showDialog<String>(
+            context: context,
+            builder: (_) {
+              return const MyAlertDialog(
+                title: "AlertDialog",
+                content: "メッセージメッセージ",
+              );
+            },
+          );
+          debugPrint(selectedText);
+        },
+      ),
     ];
   }
 
