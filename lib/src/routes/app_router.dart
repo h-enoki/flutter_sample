@@ -9,6 +9,7 @@ import 'package:flutter_sample/src/views/widget_sample/container_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/dialogs_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/expanded_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/flexible_page.dart';
+import 'package:flutter_sample/src/views/widget_sample/image_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/layoutBuilder_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/listview_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/padding_page.dart';
@@ -82,6 +83,9 @@ class AppRouter {
 
       case AppRoutes.dialogs:
         return _buildRoute(const DialogsPage());
+
+      case AppRoutes.image:
+        return _buildRoute(const ImagePage());
 
       default:
         return null;

@@ -17,4 +17,5 @@ class AppRoutes {
   static const padding = '/padding';
   static const bottomNavigationBar = '/bottomNavigationBar';
   static const dialogs = '/dialogs';
+  static const image = '/image';
 }
