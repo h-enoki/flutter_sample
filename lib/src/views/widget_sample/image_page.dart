@@ -44,9 +44,10 @@ class ImagePage extends StatelessWidget {
   Widget _myContainer(BuildContext context, String title, Widget image) {
     return Container(
       width: 300,
+      height: 250,
       margin: const EdgeInsets.only(top: 20),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Text(
             title,
