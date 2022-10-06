@@ -14,6 +14,7 @@ import 'package:flutter_sample/src/views/widget_sample/image_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/layoutBuilder_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/listview_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/padding_page.dart';
+import 'package:flutter_sample/src/views/widget_sample/progressndicator_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/row_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/singlechildscrollView_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/stack_page.dart';
@@ -94,6 +95,9 @@ class AppRouter {
 
       case AppRoutes.gridView:
         return _buildRoute(const GridViewPage());
+
+      case AppRoutes.progressIndicator:
+        return _buildRoute(const ProgressIndicatorPage());
 
       default:
         return null;

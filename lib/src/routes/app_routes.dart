@@ -20,4 +20,5 @@ class AppRoutes {
   static const image = '/image';
   static const singleChildScrollView = '/singleChildScrollView';
   static const gridView = '/gridView';
+  static const progressIndicator = '/progressIndicator';
 }
