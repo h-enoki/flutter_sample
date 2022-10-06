@@ -39,6 +39,7 @@ class MyHomePage extends StatelessWidget {
   List<Widget> _items(BuildContext context) {
     return [
       _myListTile(context, AppRoutes.hoge),
+      _myListTile(context, AppRoutes.gridView),
       _myListTile(context, AppRoutes.singleChildScrollView),
       _myListTile(context, AppRoutes.image),
       _myListTile(context, AppRoutes.dialogs),

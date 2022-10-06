@@ -9,6 +9,7 @@ import 'package:flutter_sample/src/views/widget_sample/container_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/dialogs_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/expanded_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/flexible_page.dart';
+import 'package:flutter_sample/src/views/widget_sample/gridView_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/image_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/layoutBuilder_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/listview_page.dart';
@@ -90,6 +91,9 @@ class AppRouter {
 
       case AppRoutes.singleChildScrollView:
         return _buildRoute(const SingleChildScrollViewPage());
+
+      case AppRoutes.gridView:
+        return _buildRoute(const GridViewPage());
 
       default:
         return null;

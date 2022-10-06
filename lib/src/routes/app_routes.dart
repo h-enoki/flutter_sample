@@ -19,4 +19,5 @@ class AppRoutes {
   static const dialogs = '/dialogs';
   static const image = '/image';
   static const singleChildScrollView = '/singleChildScrollView';
+  static const gridView = '/gridView';
 }
