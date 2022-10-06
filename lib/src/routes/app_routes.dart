@@ -18,4 +18,5 @@ class AppRoutes {
   static const bottomNavigationBar = '/bottomNavigationBar';
   static const dialogs = '/dialogs';
   static const image = '/image';
+  static const singleChildScrollView = '/singleChildScrollView';
 }

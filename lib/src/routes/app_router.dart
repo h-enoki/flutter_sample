@@ -14,6 +14,7 @@ import 'package:flutter_sample/src/views/widget_sample/layoutBuilder_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/listview_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/padding_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/row_page.dart';
+import 'package:flutter_sample/src/views/widget_sample/singlechildscrollView_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/stack_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/statefulwidget_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/statelesswidget_page.dart';
@@ -86,6 +87,9 @@ class AppRouter {
 
       case AppRoutes.image:
         return _buildRoute(const ImagePage());
+
+      case AppRoutes.singleChildScrollView:
+        return _buildRoute(const SingleChildScrollViewPage());
 
       default:
         return null;
