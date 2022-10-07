@@ -60,29 +60,35 @@ class DialogsPage extends StatelessWidget {
     String text, {
     VoidCallback? onPressed,
   }) {
-    return Container(
-      height: 30,
-      margin: const EdgeInsets.only(top: 20),
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          minimumSize: const Size.fromWidth(100),
-          backgroundColor: Colors.blueGrey,
-          shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(20),
+    return Theme(
+      data: Theme.of(context).copyWith(
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            minimumSize: const Size.fromWidth(100),
+            backgroundColor: Colors.blueGrey,
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(
+                Radius.circular(20),
+              ),
             ),
           ),
         ),
-        onPressed: onPressed ??
-            () {
-              debugPrint("onPressed");
-            },
-        child: Text(
-          text,
-          style: const TextStyle(
-            color: Colors.black54,
-            // fontSize: 16.0,
-            // fontWeight: FontWeight.bold,
+      ),
+      child: Container(
+        height: 30,
+        margin: const EdgeInsets.only(top: 20),
+        child: ElevatedButton(
+          onPressed: onPressed ??
+              () {
+                debugPrint("onPressed");
+              },
+          child: Text(
+            text,
+            style: const TextStyle(
+              color: Colors.black54,
+              // fontSize: 16.0,
+              // fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ),

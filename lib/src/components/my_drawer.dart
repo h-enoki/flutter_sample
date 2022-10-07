@@ -12,18 +12,18 @@ class MyDrawer extends StatelessWidget {
       child: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
-          children: const <Widget>[
+          children: <Widget>[
             DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.cyan,
+                color: Theme.of(context).primaryColor,
               ),
-              child: Text('Drawer Header'),
+              child: const Text('Drawer Header'),
             ),
-            ListTile(
+            const ListTile(
               title: Text("Item 1"),
               trailing: Icon(Icons.arrow_forward_ios),
             ),
-            ListTile(
+            const ListTile(
               title: Text("Item 2"),
               trailing: Icon(Icons.arrow_forward_ios),
             ),

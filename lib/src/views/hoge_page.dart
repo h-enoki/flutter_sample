@@ -8,8 +8,14 @@ class HogePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MyAppBar.withSettingsButton("HogePage"),
-      body: const Center(
-        child: Text("HogePage"),
+      body: Center(
+        child: Text(
+          "HogePage",
+          style: Theme.of(context)
+              .textTheme
+              .titleLarge
+              ?.copyWith(color: Colors.green),
+        ),
       ),
     );
   }

@@ -37,7 +37,7 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
         title: Text(title),
         centerTitle: true,
         elevation: 4,
-        backgroundColor: Colors.cyan,
+        backgroundColor: Theme.of(context).primaryColor,
         leading: leading,
         actions: actions);
   }
