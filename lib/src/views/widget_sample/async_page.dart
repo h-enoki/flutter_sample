@@ -3,9 +3,14 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_sample/src/components/my_app_bar.dart';
 
-class AsyncPage extends StatelessWidget {
-  AsyncPage({super.key});
+class AsyncPage extends StatefulWidget {
+  const AsyncPage({super.key});
 
+  @override
+  State<AsyncPage> createState() => _AsyncPageState();
+}
+
+class _AsyncPageState extends State<AsyncPage> {
   Future<void> perform() async {
     task1();
     task3(await task2());
@@ -37,6 +42,14 @@ class AsyncPage extends StatelessWidget {
       await Future.delayed(const Duration(seconds: 1));
       streamController.sink.add(i);
     }
+  }
+
+  @override
+  void dispose() {
+    debugPrint("dispose");
+    // StreamControllerは必ず開放する
+    streamController.close();
+    super.dispose();
   }
 
   @override

@@ -101,7 +101,7 @@ class AppRouter {
         return _buildRoute(const ProgressIndicatorPage());
 
       case AppRoutes.async:
-        return _buildRoute(AsyncPage());
+        return _buildRoute(const AsyncPage());
 
       default:
         return null;
