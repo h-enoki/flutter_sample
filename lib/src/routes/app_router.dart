@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sample/src/views/hoge_page.dart';
 import 'package:flutter_sample/src/views/home_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/align_page.dart';
+import 'package:flutter_sample/src/views/widget_sample/async_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/bottomnavigationbar_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/center_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/column_page.dart';
@@ -98,6 +99,9 @@ class AppRouter {
 
       case AppRoutes.progressIndicator:
         return _buildRoute(const ProgressIndicatorPage());
+
+      case AppRoutes.async:
+        return _buildRoute(AsyncPage());
 
       default:
         return null;
