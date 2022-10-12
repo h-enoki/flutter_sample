@@ -48,7 +48,7 @@ class AsyncPage extends StatelessWidget {
     });
 
     return Scaffold(
-      appBar: const MyAppBar("AsyncPagePage"),
+      appBar: const MyAppBar("AsyncPage"),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
