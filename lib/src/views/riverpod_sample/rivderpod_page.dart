@@ -69,7 +69,6 @@ class RivderpodPage extends ConsumerWidget {
         onPressed: () {
           countStateController.increment();
         },
-        tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
     );

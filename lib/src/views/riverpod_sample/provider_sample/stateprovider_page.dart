@@ -22,7 +22,7 @@ class StateProviderPage extends ConsumerWidget {
     // final count = ref.read(countNotifierProvider);
 
     return Scaffold(
-      appBar: const MyAppBar("StateNotifierProviderPage"),
+      appBar: const MyAppBar("StateProviderPage"),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -44,7 +44,6 @@ class StateProviderPage extends ConsumerWidget {
           // 直近のデータ(状態)を無視してデータ更新
           // countStateController.state = 100;
         },
-        tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
     );

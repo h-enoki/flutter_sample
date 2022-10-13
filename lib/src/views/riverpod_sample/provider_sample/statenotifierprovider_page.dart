@@ -54,7 +54,6 @@ class StateNotifierProviderPage extends ConsumerWidget {
           // CounterNotifierに実装したincrement() で、StateNotifierで管理しているデータを変更
           countStateController.increment();
         },
-        tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
     );

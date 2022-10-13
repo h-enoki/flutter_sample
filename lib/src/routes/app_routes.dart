@@ -26,4 +26,6 @@ class AppRoutes {
   static const provider = '/provider';
   static const stateProvider = '/stateProvider';
   static const stateNotifierProvider = '/stateNotifierProvider';
+  static const futureProvider = '/futureProvider';
+  static const streamProvider = '/streamProvider';
 }
