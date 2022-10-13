@@ -22,4 +22,8 @@ class AppRoutes {
   static const gridView = '/gridView';
   static const progressIndicator = '/progressIndicator';
   static const async = '/async';
+  static const rivderpod = '/rivderpod';
+  static const provider = '/provider';
+  static const stateProvider = '/stateProvider';
+  static const stateNotifierProvider = '/stateNotifierProvider';
 }

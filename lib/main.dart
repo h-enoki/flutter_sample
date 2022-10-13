@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_sample/src/routes/app_router.dart';
 
 // RouteObserverのインスタンス
@@ -6,7 +7,8 @@ final RouteObserver<PageRoute> _routeObserver = RouteObserver<PageRoute>();
 // final RouteObserver<ModalRoute<void>> routeObserver = RouteObserver<ModalRoute<void>>();
 
 void main() {
-  runApp(const MyApp());
+  // ルートにProviderScopeを追加
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {

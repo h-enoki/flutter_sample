@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sample/src/views/hoge_page.dart';
 import 'package:flutter_sample/src/views/home_page.dart';
+import 'package:flutter_sample/src/views/riverpod_sample/provider_sample/provider_page.dart';
+import 'package:flutter_sample/src/views/riverpod_sample/provider_sample/statenotifierprovider_page.dart';
+import 'package:flutter_sample/src/views/riverpod_sample/provider_sample/stateprovider_page.dart';
+import 'package:flutter_sample/src/views/riverpod_sample/rivderpod_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/align_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/async_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/bottomnavigationbar_page.dart';
@@ -102,6 +106,18 @@ class AppRouter {
 
       case AppRoutes.async:
         return _buildRoute(const AsyncPage());
+
+      case AppRoutes.rivderpod:
+        return _buildRoute(const RivderpodPage());
+
+      case AppRoutes.provider:
+        return _buildRoute(const ProviderPage());
+
+      case AppRoutes.stateProvider:
+        return _buildRoute(const StateProviderPage());
+
+      case AppRoutes.stateNotifierProvider:
+        return _buildRoute(const StateNotifierProviderPage());
 
       default:
         return null;
