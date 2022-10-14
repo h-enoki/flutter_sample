@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sample/src/views/dio_coffee_page.dart';
 import 'package:flutter_sample/src/views/hoge_page.dart';
 import 'package:flutter_sample/src/views/home_page.dart';
 import 'package:flutter_sample/src/views/riverpod_sample/provider_sample/combinning_provider_page.dart';
@@ -130,6 +131,9 @@ class AppRouter {
 
       case AppRoutes.combinningProviderPage:
         return _buildRoute(const CombinningProviderPage());
+
+      case AppRoutes.dioPage:
+        return _buildRoute(const DioCoffeePage());
 
       default:
         return null;

@@ -29,4 +29,5 @@ class AppRoutes {
   static const futureProvider = '/futureProvider';
   static const streamProvider = '/streamProvider';
   static const combinningProviderPage = '/combinningProviderPage';
+  static const dioPage = '/dioPage';
 }
