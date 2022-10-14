@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sample/src/views/hoge_page.dart';
 import 'package:flutter_sample/src/views/home_page.dart';
+import 'package:flutter_sample/src/views/riverpod_sample/provider_sample/combinning_provider_page.dart';
 import 'package:flutter_sample/src/views/riverpod_sample/provider_sample/futureprovider_page.dart';
 import 'package:flutter_sample/src/views/riverpod_sample/provider_sample/provider_page.dart';
 import 'package:flutter_sample/src/views/riverpod_sample/provider_sample/statenotifierprovider_page.dart';
@@ -126,6 +127,9 @@ class AppRouter {
 
       case AppRoutes.streamProvider:
         return _buildRoute(const StreamProviderPage());
+
+      case AppRoutes.combinningProviderPage:
+        return _buildRoute(const CombinningProviderPage());
 
       default:
         return null;
