@@ -14,8 +14,9 @@ void main() async {
   // ルートにProviderScopeを追加
   runApp(const ProviderScope(child: MyApp()));
 
-  // // SharedPreferencesのインスタンスを非同期で取得
+  // SharedPreferencesのインスタンスを非同期で取得
   final prefs = await SharedPreferences.getInstance();
+
   sharedPrefServiceProvider = Provider<PrefService>((ref) {
     return PrefService(prefs);
   });
