@@ -9,6 +9,7 @@ import 'package:flutter_sample/src/views/riverpod_sample/provider_sample/stateno
 import 'package:flutter_sample/src/views/riverpod_sample/provider_sample/stateprovider_page.dart';
 import 'package:flutter_sample/src/views/riverpod_sample/provider_sample/streamprovider_page.dart';
 import 'package:flutter_sample/src/views/riverpod_sample/rivderpod_page.dart';
+import 'package:flutter_sample/src/views/shared_preferences_page.dart.dart';
 import 'package:flutter_sample/src/views/widget_sample/align_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/async_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/bottomnavigationbar_page.dart';
@@ -134,6 +135,9 @@ class AppRouter {
 
       case AppRoutes.dioPage:
         return _buildRoute(const DioCoffeePage());
+
+      case AppRoutes.sharedPreferences:
+        return _buildRoute(SharedPreferencesPage());
 
       default:
         return null;

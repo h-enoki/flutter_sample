@@ -30,4 +30,5 @@ class AppRoutes {
   static const streamProvider = '/streamProvider';
   static const combinningProviderPage = '/combinningProviderPage';
   static const dioPage = '/dioPage';
+  static const sharedPreferences = '/sharedPreferences';
 }
