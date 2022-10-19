@@ -31,4 +31,6 @@ class AppRoutes {
   static const combinningProviderPage = '/combinningProviderPage';
   static const dioPage = '/dioPage';
   static const sharedPreferences = '/sharedPreferences';
+  static const webView = '/webView';
+  static const webViewScreen = '/webViewScreen';
 }

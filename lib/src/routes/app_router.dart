@@ -10,6 +10,8 @@ import 'package:flutter_sample/src/views/riverpod_sample/provider_sample/statepr
 import 'package:flutter_sample/src/views/riverpod_sample/provider_sample/streamprovider_page.dart';
 import 'package:flutter_sample/src/views/riverpod_sample/rivderpod_page.dart';
 import 'package:flutter_sample/src/views/shared_preferences_page.dart.dart';
+import 'package:flutter_sample/src/views/webview_sample/webview_page.dart';
+import 'package:flutter_sample/src/views/webview_sample/webview_screen.dart';
 import 'package:flutter_sample/src/views/widget_sample/align_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/async_page.dart';
 import 'package:flutter_sample/src/views/widget_sample/bottomnavigationbar_page.dart';
@@ -138,6 +140,12 @@ class AppRouter {
 
       case AppRoutes.sharedPreferences:
         return _buildRoute(SharedPreferencesPage());
+
+      case AppRoutes.webView:
+        return _buildRoute(const WebViewPage());
+
+      case AppRoutes.webViewScreen:
+        return _buildRoute(const WebViewScreenPage());
 
       default:
         return null;
