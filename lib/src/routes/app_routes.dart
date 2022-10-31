@@ -33,4 +33,5 @@ class AppRoutes {
   static const sharedPreferences = '/sharedPreferences';
   static const webView = '/webView';
   static const webViewScreen = '/webViewScreen';
+  static const secureStoragePage = '/secureStoragePage';
 }

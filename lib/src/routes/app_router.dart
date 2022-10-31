@@ -9,6 +9,7 @@ import 'package:flutter_sample/src/views/riverpod_sample/provider_sample/stateno
 import 'package:flutter_sample/src/views/riverpod_sample/provider_sample/stateprovider_page.dart';
 import 'package:flutter_sample/src/views/riverpod_sample/provider_sample/streamprovider_page.dart';
 import 'package:flutter_sample/src/views/riverpod_sample/rivderpod_page.dart';
+import 'package:flutter_sample/src/views/secure_storage_page.dart';
 import 'package:flutter_sample/src/views/shared_preferences_page.dart.dart';
 import 'package:flutter_sample/src/views/webview_sample/webview_page.dart';
 import 'package:flutter_sample/src/views/webview_sample/webview_screen.dart';
@@ -146,6 +147,9 @@ class AppRouter {
 
       case AppRoutes.webViewScreen:
         return _buildRoute(const WebViewScreenPage());
+
+      case AppRoutes.secureStoragePage:
+        return _buildRoute(SecureStoragePage());
 
       default:
         return null;

@@ -1,21 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_sample/main.dart';
 import 'package:flutter_sample/src/components/my_app_bar.dart';
-import 'package:flutter_sample/src/services/pref_service.dart';
+import 'package:flutter_sample/src/services/secure_storage_service.dart';
 
 // 画面表示用のProviderの定義
 final textValueProvider = FutureProvider<String?>((ref) async {
-  // SharedPreferencesの読み込み
-  final textValue =
-      await ref.read(sharedPrefServiceProvider).getString(PrefKey.text) ??
-          "未入力";
+  // SecureStorageの読み込み
+  final textValue = await SecureStorageService.readStorage("key1") ?? "未入力";
   return textValue;
 });
 
-class SharedPreferencesPage extends ConsumerWidget {
-  SharedPreferencesPage({super.key});
+class SecureStoragePage extends ConsumerWidget {
+  SecureStoragePage({super.key});
 
   // TextFieldのコントローラー
   final TextEditingController textEditingController = TextEditingController();
@@ -27,9 +24,8 @@ class SharedPreferencesPage extends ConsumerWidget {
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
-        appBar: MyAppBar.withSettingsButton(
-          "SharedPreferencesPage",
-          onSettingsPressed: () => FocusScope.of(context).unfocus(),
+        appBar: const MyAppBar(
+          "SecureStoragePage",
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -69,16 +65,15 @@ class SharedPreferencesPage extends ConsumerWidget {
                     backgroundColor: Colors.blue,
                     foregroundColor: Colors.white,
                   ),
-                  onPressed: () {
+                  onPressed: () async {
                     // キーボードを閉じる
                     FocusScope.of(context).unfocus();
                     // TextFieldの入力値を取得
                     String textValue = textEditingController.text;
-                    // SharedPreferencesの保存
-                    ref.read(sharedPrefServiceProvider).setString(
-                          PrefKey.text,
-                          textValue,
-                        );
+
+                    // SecureStorageの書き込み
+                    await SecureStorageService.writeStorage("key1", textValue);
+
                     // 画面表示用のプロバイダーを更新
                     ref.refresh(textValueProvider);
                     textEditingController.clear();
@@ -94,11 +89,9 @@ class SharedPreferencesPage extends ConsumerWidget {
                   onPressed: () async {
                     // キーボードを閉じる
                     FocusScope.of(context).unfocus();
-                    // SharedPreferencesの読み込み
-                    final textValue = await ref
-                            .read(sharedPrefServiceProvider)
-                            .getString(PrefKey.text) ??
-                        "未入力";
+                    // SecureStorageの読み込み
+                    final textValue =
+                        await SecureStorageService.readStorage("key1") ?? "未入力";
                     debugPrint(textValue);
                   },
                   child: const Text("読込み"),
@@ -109,15 +102,52 @@ class SharedPreferencesPage extends ConsumerWidget {
                     backgroundColor: Colors.red,
                     foregroundColor: Colors.white,
                   ),
-                  onPressed: () {
+                  onPressed: () async {
                     // キーボードを閉じる
                     FocusScope.of(context).unfocus();
-                    // SharedPreferencesの削除
-                    ref.read(sharedPrefServiceProvider).remove(PrefKey.text);
+                    // SecureStorageの削除
+                    await SecureStorageService.deleteStorage("key1");
                     // 画面表示用のプロバイダーを更新
                     ref.refresh(textValueProvider);
                   },
                   child: const Text("削除"),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const SizedBox(width: 30),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.white,
+                    backgroundColor: Colors.green,
+                  ),
+                  onPressed: () async {
+                    // キーボードを閉じる
+                    FocusScope.of(context).unfocus();
+                    // SecureStorageの全件読み込み
+                    final textValue =
+                        await SecureStorageService.readAllStorage();
+                    debugPrint(textValue.toString());
+                  },
+                  child: const Text("読込みALL"),
+                ),
+                const SizedBox(width: 30),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red,
+                    foregroundColor: Colors.white,
+                  ),
+                  onPressed: () async {
+                    // キーボードを閉じる
+                    FocusScope.of(context).unfocus();
+                    // SecureStorageの全件削除
+                    await SecureStorageService.deleteAllStorage();
+                    // 画面表示用のプロバイダーを更新
+                    ref.refresh(textValueProvider);
+                  },
+                  child: const Text("削除ALL"),
                 ),
               ],
             ),
