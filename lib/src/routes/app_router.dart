@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sample/src/views/cached_network_image_page.dart';
 import 'package:flutter_sample/src/views/dio_coffee_page.dart';
 import 'package:flutter_sample/src/views/hoge_page.dart';
 import 'package:flutter_sample/src/views/home_page.dart';
@@ -154,6 +155,9 @@ class AppRouter {
 
       case AppRoutes.imageGallerySaverPage:
         return _buildRoute(const ImageGallerySaverPage());
+
+      case AppRoutes.cachedNetworkImagePage:
+        return _buildRoute(CachedNetworkImagePage());
 
       default:
         return null;
