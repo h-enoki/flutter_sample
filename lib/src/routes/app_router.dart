@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sample/src/views/cached_network_image_page.dart';
 import 'package:flutter_sample/src/views/dio_coffee_page.dart';
+import 'package:flutter_sample/src/views/flutter_keyboard_visibility_page.dart';
 import 'package:flutter_sample/src/views/hoge_page.dart';
 import 'package:flutter_sample/src/views/home_page.dart';
 import 'package:flutter_sample/src/views/image_gallery_saver_page.dart';
@@ -158,6 +159,9 @@ class AppRouter {
 
       case AppRoutes.cachedNetworkImagePage:
         return _buildRoute(CachedNetworkImagePage());
+
+      case AppRoutes.flutterKeyboardVisibilityPage:
+        return _buildRoute(const FlutterKeyboardVisibilityPage());
 
       default:
         return null;

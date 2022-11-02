@@ -36,4 +36,5 @@ class AppRoutes {
   static const secureStoragePage = '/secureStoragePage';
   static const imageGallerySaverPage = '/imageGallerySaverPage';
   static const cachedNetworkImagePage = '/cachedNetworkImagePage';
+  static const flutterKeyboardVisibilityPage = '/flutterKeyboardVisibilityPage';
 }
