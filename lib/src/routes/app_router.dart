@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sample/src/views/dio_coffee_page.dart';
 import 'package:flutter_sample/src/views/hoge_page.dart';
 import 'package:flutter_sample/src/views/home_page.dart';
+import 'package:flutter_sample/src/views/image_gallery_saver_page.dart';
 import 'package:flutter_sample/src/views/riverpod_sample/provider_sample/combinning_provider_page.dart';
 import 'package:flutter_sample/src/views/riverpod_sample/provider_sample/futureprovider_page.dart';
 import 'package:flutter_sample/src/views/riverpod_sample/provider_sample/provider_page.dart';
@@ -150,6 +151,9 @@ class AppRouter {
 
       case AppRoutes.secureStoragePage:
         return _buildRoute(SecureStoragePage());
+
+      case AppRoutes.imageGallerySaverPage:
+        return _buildRoute(const ImageGallerySaverPage());
 
       default:
         return null;
