@@ -5,6 +5,7 @@ import 'package:flutter_sample/src/views/flutter_keyboard_visibility_page.dart';
 import 'package:flutter_sample/src/views/hoge_page.dart';
 import 'package:flutter_sample/src/views/home_page.dart';
 import 'package:flutter_sample/src/views/image_gallery_saver_page.dart';
+import 'package:flutter_sample/src/views/package_info_page.dart';
 import 'package:flutter_sample/src/views/riverpod_sample/provider_sample/combinning_provider_page.dart';
 import 'package:flutter_sample/src/views/riverpod_sample/provider_sample/futureprovider_page.dart';
 import 'package:flutter_sample/src/views/riverpod_sample/provider_sample/provider_page.dart';
@@ -162,6 +163,9 @@ class AppRouter {
 
       case AppRoutes.flutterKeyboardVisibilityPage:
         return _buildRoute(const FlutterKeyboardVisibilityPage());
+
+      case AppRoutes.packageInfoPage:
+        return _buildRoute(const PackageInfoPage());
 
       default:
         return null;
