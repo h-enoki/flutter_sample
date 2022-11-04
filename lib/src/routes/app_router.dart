@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sample/src/views/cached_network_image_page.dart';
+import 'package:flutter_sample/src/views/device_info_page.dart';
 import 'package:flutter_sample/src/views/dio_coffee_page.dart';
 import 'package:flutter_sample/src/views/flutter_keyboard_visibility_page.dart';
 import 'package:flutter_sample/src/views/hoge_page.dart';
@@ -166,6 +167,9 @@ class AppRouter {
 
       case AppRoutes.packageInfoPage:
         return _buildRoute(const PackageInfoPage());
+
+      case AppRoutes.deviceInfoPage:
+        return _buildRoute(const DeviceInfoPage());
 
       default:
         return null;

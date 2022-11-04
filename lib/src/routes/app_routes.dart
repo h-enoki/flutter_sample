@@ -38,4 +38,5 @@ class AppRoutes {
   static const cachedNetworkImagePage = '/cachedNetworkImagePage';
   static const flutterKeyboardVisibilityPage = '/flutterKeyboardVisibilityPage';
   static const packageInfoPage = '/packageInfoPage';
+  static const deviceInfoPage = '/deviceInfoPage';
 }

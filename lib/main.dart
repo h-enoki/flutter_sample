@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_sample/src/routes/app_router.dart';
@@ -11,6 +14,7 @@ final RouteObserver<PageRoute> _routeObserver = RouteObserver<PageRoute>();
 
 late final Provider<PrefService> sharedPrefServiceProvider;
 late final Provider<PackageInfo> packageInfoProvider;
+late final Provider<AndroidDeviceInfo> androidDeviceInfoProvider;
 
 void main() async {
   // ルートにProviderScopeを追加
@@ -28,6 +32,15 @@ void main() async {
   packageInfoProvider = Provider<PackageInfo>((ref) {
     return packageInfo;
   });
+
+  // device_info_plus
+  final deviceInfo = DeviceInfoPlugin();
+  if (Platform.isAndroid) {
+    AndroidDeviceInfo androidInfo = await deviceInfo.androidInfo;
+    androidDeviceInfoProvider = Provider<AndroidDeviceInfo>((ref) {
+      return androidInfo;
+    });
+  }
 }
 
 class MyApp extends StatelessWidget {
