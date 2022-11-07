@@ -50,6 +50,7 @@ dependencies:
   flutter_keyboard_visibility: ^5.4.0
   package_info_plus: ^3.0.1
   device_info_plus: ^8.0.0
+  permission_handler: ^10.2.0
 
 dev_dependencies:
   flutter_test:

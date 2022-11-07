@@ -7,6 +7,7 @@ import 'package:flutter_sample/src/views/hoge_page.dart';
 import 'package:flutter_sample/src/views/home_page.dart';
 import 'package:flutter_sample/src/views/image_gallery_saver_page.dart';
 import 'package:flutter_sample/src/views/package_info_page.dart';
+import 'package:flutter_sample/src/views/permission_handler.dart';
 import 'package:flutter_sample/src/views/riverpod_sample/provider_sample/combinning_provider_page.dart';
 import 'package:flutter_sample/src/views/riverpod_sample/provider_sample/futureprovider_page.dart';
 import 'package:flutter_sample/src/views/riverpod_sample/provider_sample/provider_page.dart';
@@ -138,10 +139,10 @@ class AppRouter {
       case AppRoutes.streamProvider:
         return _buildRoute(const StreamProviderPage());
 
-      case AppRoutes.combinningProviderPage:
+      case AppRoutes.combinningProvider:
         return _buildRoute(const CombinningProviderPage());
 
-      case AppRoutes.dioPage:
+      case AppRoutes.dio:
         return _buildRoute(const DioCoffeePage());
 
       case AppRoutes.sharedPreferences:
@@ -153,23 +154,26 @@ class AppRouter {
       case AppRoutes.webViewScreen:
         return _buildRoute(const WebViewScreenPage());
 
-      case AppRoutes.secureStoragePage:
+      case AppRoutes.secureStorage:
         return _buildRoute(SecureStoragePage());
 
-      case AppRoutes.imageGallerySaverPage:
+      case AppRoutes.imageGallerySaver:
         return _buildRoute(const ImageGallerySaverPage());
 
-      case AppRoutes.cachedNetworkImagePage:
+      case AppRoutes.cachedNetworkImage:
         return _buildRoute(CachedNetworkImagePage());
 
-      case AppRoutes.flutterKeyboardVisibilityPage:
+      case AppRoutes.flutterKeyboardVisibility:
         return _buildRoute(const FlutterKeyboardVisibilityPage());
 
-      case AppRoutes.packageInfoPage:
+      case AppRoutes.packageInfo:
         return _buildRoute(const PackageInfoPage());
 
-      case AppRoutes.deviceInfoPage:
+      case AppRoutes.deviceInfo:
         return _buildRoute(const DeviceInfoPage());
+
+      case AppRoutes.permissionHandler:
+        return _buildRoute(const PermissionHandlerPage());
 
       default:
         return null;
