@@ -5,6 +5,7 @@ import 'package:flutter_sample/src/views/package_sample/cached_network_image_pag
 import 'package:flutter_sample/src/views/package_sample/device_info_page.dart';
 import 'package:flutter_sample/src/views/package_sample/dio_coffee_page.dart';
 import 'package:flutter_sample/src/views/package_sample/flutter_keyboard_visibility_page.dart';
+import 'package:flutter_sample/src/views/package_sample/flutter_local_notifications_page.dart';
 import 'package:flutter_sample/src/views/package_sample/image_gallery_saver_page.dart';
 import 'package:flutter_sample/src/views/package_sample/package_info_page.dart';
 import 'package:flutter_sample/src/views/package_sample/permission_handler.dart';
@@ -174,6 +175,9 @@ class AppRouter {
 
       case AppRoutes.permissionHandler:
         return _buildRoute(const PermissionHandlerPage());
+
+      case AppRoutes.flutterLocalNotifications:
+        return _buildRoute(FlutterLocalNotificationsPage());
 
       default:
         return null;

@@ -39,6 +39,7 @@ class MyHomePage extends StatelessWidget {
   List<Widget> _items(BuildContext context) {
     return [
       _myListTile(context, AppRoutes.hoge),
+      _myListTile(context, AppRoutes.flutterLocalNotifications),
       _myListTile(context, AppRoutes.permissionHandler),
       _myListTile(context, AppRoutes.deviceInfo),
       _myListTile(context, AppRoutes.packageInfo),

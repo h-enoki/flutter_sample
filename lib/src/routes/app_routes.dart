@@ -40,4 +40,5 @@ class AppRoutes {
   static const packageInfo = '/packageInfo';
   static const deviceInfo = '/deviceInfo';
   static const permissionHandler = '/permissionHandler';
+  static const flutterLocalNotifications = '/flutterLocalNotifications';
 }
